@@ -1,0 +1,7 @@
+    version: '3.8' # Use a compatible Docker Compose version
+    services:
+      web:
+        image: '<your_ecr_registry_url>/<your_ecr_repo_name>:${IMAGE_TAG}' # Use the ECR image and tag
+        ports:
+          - '80:80' # Map port 80 on the host to port 80 in the container
+        restart: always
